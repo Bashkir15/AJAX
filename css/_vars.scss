@@ -1,0 +1,6 @@
+$primary-color: #ffc17a;
+$secondary-color: complement($primary-color);
+$dark-primary: darken($primary-color, 20%);
+$dark-secondary: darken($secondary-color, 20%);
+$light-primary: lighten($primary-color, 20%);
+$light-secondary: lighten($secondary-color, 5%);

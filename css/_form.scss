@@ -1,0 +1,25 @@
+.login{
+  padding: 20px;
+  width: 500px;
+  background: #fff;
+  border: 2px solid $secondary-color;
+  color: $dark-primary;
+  @include Hcenter(500px/2 , 255.4px/2);
+  text-align: center;
+
+  input[type="submit"]{
+    border: none;
+    padding: 10px 20px;
+    background: $light-secondary;
+    color: #fff;
+    &:hover{
+      background: darken($secondary-color, 5%);
+    }
+  }
+
+}
+
+
+.signup{
+  @include Hcenter(500px/2, 393.44px/2);
+}

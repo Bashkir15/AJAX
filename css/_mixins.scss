@@ -1,0 +1,5 @@
+@mixin Hcenter($width, $height){
+  position: absolute;
+  top: calc(50% - #{$height});
+  left: calc(50% - #{$width});
+}

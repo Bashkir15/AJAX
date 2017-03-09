@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html> <!-- This will open and close your entire document. <html tag was missing> -->
+  <head>
+    <title>Power of AJAX</title>
+    <meta charset="utf-8">
+
+    <!-- This meta tag helps with responsive design, which is something that is requied. Without this meta tag your content will not scale for devices so it will look super zoomed out -->
+
+    <meta name='viewport' content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Just to let you know, I am not fixing any styles, so things will look kind of wonky, but you know how to write css it looks like. THe only thing I will say is: stop using float. THere are some places where float is still appropriate, but in most cases float is not the answer. It is annoying to deal with and has some layout consequences. Either use position properties or even better, learn the magic of Flexbox. -->
+
+
+  </head>
+
+  <body>
+    <main> <!-- Just for semantics -->
+
+      <header>
+
+          <div class="scroll">
+            <h1 class="logo">The Power of AJAX</h1>
+
+            <div class="nav"> <!-- I'm not going to change this because it might mess up your styling, which I'm not going to change, but you should use the <nav> tag for navigation. Also, you logo could have gone inside of the nav. I know you probably just did this so you could make the logo easily come first, but there are much better ways to do it. Check out flexbox -->
+
+            <!-- <form action="">
+              <a id="log-in" href="login.html"><input type="button" value="Log in"></a>
+            <a id="sign-up" href="form.html"><input type="button" value="sign up"></a>
+            </form> 
+
+            It seems whatever you were using to learn, I have no idea but I'm going to take a guess and say W3Cschool was involved, is fairly outdated. Most of these things are not required and are not best practice anymore; HTML5 fixed them.
+
+            1. Forms do not need an action anymore, you will handle this with buttons.
+
+            2. You never, ever, ever need to use inputs for buttons. This is a hack that should not be used. It is bad for accessibility. Also, for links, you don't need buttons at all. It is perfectly fine to just have the anchor tag itself.
+
+            You can check my edited versions for that
+             -->
+
+              <div class='nav-form-replacement'>
+                <a id='log-in' href='/login'>Login</a> <!-- with server we route links now instead of to files -->
+
+                <a id='sign-up' href='/signup'>Signup</a>
+              </div>
+
+               <a href="#" class="question">Have a question?</a>
+            </div>
+        </div> <!--end of scroll -->
+
+        <div class="updates">
+          <h1>Sign up to set you up to date with Ajax...</h1>
+          <!-- 
+          <form action="www.nowhere.com" class="email">
+            <input type="email" name="email" placeholder="Enter your email"><br>
+            <a href="signup.html">
+              <input type="button" value="Sign up">
+            </a>
+          </form>
+
+            Again, forms do not need actions any more, and don't use inputs as buttons.
+            However, you can give your forms names
+
+          -->
+
+          <form class='email' name='signupForm'>
+            <label for='signup-email'>Enter your email</label>          
+            <input type='email' name='email' id='signup-email'> <!-- You can use placeholders if you wish, but I prefer to use labels because you can assign for properties for accessibility -->
+
+            <button type='button' aria-label='submit signup form'>Sign Up</button> <!-- This is how input submissions should be handled. With a semantic button with the button type, an aria-label describing the purpose of the button, an aria-label to describe what the button does for screen readers, and a class or id, something, so the js can pick it up easy for submission. You could also use onClick, but it isn't as performant -->
+          </form>
+        </div>
+
+        <div id="login-overlay" class="lightbox">
+        </div>
+      </header>
+
+    <!-- Alright, a couple things to point out before I wrap this part up. Your nav should not go in your header. Your nav is not part of your header it is its own semantic content. You could put it in your header, but it is something that is going to be on every page and belongs to the body itself rather than just your index page if that makes sense.
+
+    Second, this is just pedantry but it will save you some grief later. Organize your html better. It seems silly but it improves readability so much. Make sure you indent properly. If elements are nested, you indent. That is the only requirement. Outside of that I like to split up different sections with spaces. If I am using a div, which corresponds to a block of content, there will almost always be a space before its opening tag and after its closing tag -->
+
+    </main>
+
+    <script src="script.vanilla.js"></script>
+  </body>
+</html>

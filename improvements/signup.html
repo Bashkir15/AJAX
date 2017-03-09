@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>POfAJ - SignUP</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <form class="login signup fetch">
+    <h3>Sign Up</h3>
+
+    <!-- I'm not really sure why you are wrapping your labels and inputs in p tags here. My answer to everything is flexbox, but this is also easily solved to get the layout you want by removing the p tags and breaks so you have
+    <form>
+      <div>
+        <label></label>
+        <input>
+      .....
+    </form>
+
+    That wrapping div is much better than so many wrappers. 
+
+    You can set the wrapping divs width to whatever you want the inputs width to be, and then use margin: 0 auto to center it.
+
+    Then set label's display to block and use text-align: center
+
+    Then making the inputs width: 100% and you have the same layout
+
+    -->
+
+    <p><label for="username">Username</label><br>
+    <input type="text" id="username"></p>
+    <p><label for="username">Password</label><br>
+    <input type="text" id="password"></p>
+    <p><label for="username">email</label><br>
+    <input type="text" id="password"></p>
+    <p><label for="username" id="country">country</label><br>
+      <select name="country" id="country">
+        <option value="USA">United States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="Germany">Germany</option>
+      </select>
+    </p>
+    <div class="submit">
+      <button type='button' aria-label='submit form'>Submit</button>
+    </div>
+  </form>
+</body>
+<html>
